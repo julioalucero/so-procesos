@@ -1,0 +1,77 @@
+html {
+  font: 10px/20px Arial, sans-serif;
+  text-align: center;
+}
+
+a{text-decoration: none;}
+a:link,  a:visited { color: #fff;}
+a:hover, a:active  { color: #ddd;}
+
+#wrapper {
+  background: #2a6ebb url(../images/degradado.jpg) repeat-x;
+  margin: 0 auto;
+  width: 1000px;
+  height: 700px;
+}
+
+#header {
+  height: 100px;
+  width: 1000px;
+  border-bottom: 2px solid #fff;
+}
+
+  #header h1{
+    height: 172px;
+    width: 403px;
+    margin: 0 auto;
+    font-size: 20px;
+    padding-top: 30px;
+  }
+
+#content {
+  width: auto;
+  height: 600px;
+  padding: 50px 20px;
+}
+
+table {
+  width: 100%;
+}
+
+.running{ background-color: #f20;}
+.waiting { background-color: #1f1;}
+.doesnt-exist  { background-color: #bbb;}
+
+#table-container{
+  width: 900px;
+  margin: 40px; 10px;
+  height: 300px;
+}
+
+#table-container table{
+  width: 600px;
+  height: 300px;  
+  margin: 0 auto;
+}
+
+#table-container th{
+  width: 70px;
+  height: 30px;  
+  border: 1px #fff solid;
+  text-align: center;
+}
+
+#table-container td{
+  width: 70px;
+  height: 30px;  
+  border: 1px #fff solid;
+  text-align: center;
+}
+
+#footer {
+  position: absolute;
+  height: 60px;
+  width: 100%;
+  background: #000;
+}
+
