@@ -8,5 +8,9 @@ module Procesos
     get '/' do
       redirect :index
     end
+
+    get '/hola' do
+      'hola mundo cruel'
+    end
   end
 end
