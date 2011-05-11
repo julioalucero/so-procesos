@@ -17,6 +17,9 @@ h2 {
   font-weight: bold;
 }
 
+select { float: left; }
+input  { float: right; }
+
 #wrapper {
   background: #2a6ebb url(../images/degradado.jpg) repeat-x;
   margin: 0 auto;
