@@ -119,13 +119,10 @@ function drawGraph(graphData) {
   table.find('tr').each(function(processNumber, tr) {
     $(tr).find('td').each(function(cicleNumber, td) {
       if (graphData.isRunning(cicleNumber, processNumber)) {
-        $(td).html('ejecutando').css('color', '#fff');
         $(td).addClass('running');
       } else if (graphData.isWaiting(cicleNumber, processNumber)) {
-        $(td).html('perando').css('color', '#fff');
         $(td).addClass('waiting');
       } else {
-        $(td).html('noexiste').css('color', '#fff');
         $(td).addClass('doesnt-exist');
       }
     });
