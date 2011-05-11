@@ -1,0 +1,105 @@
+html {
+  font: 10px/20px Arial, sans-serif;
+  text-align: center;
+}
+
+table {   width: 100%; }
+
+input { margin: 5px 5px;}
+
+a{text-decoration: none;}
+a:link,  a:visited { color: #fff;}
+a:hover, a:active  { color: #ddd;}
+
+h2 { 
+  font-size: 16px;
+  text-align: center;
+  font-weight: bold;
+}
+
+select { float: left; }
+input  { float: right; }
+
+#wrapper {
+  background: #3575bf url(../images/degradado.jpg) repeat-x;
+  margin: 0 auto;
+  width: 1000px;
+  height: 100%;
+}
+
+#header {
+  height: 100px;
+  width: 1000px;
+  border-bottom: 2px solid #fff;
+}
+
+  #header h1{
+    height: 172px;
+    width: 403px;
+    margin: 0 auto;
+    font-size: 20px;
+    padding-top: 30px;
+  }
+
+#content {
+  width: auto;
+  height: 100%;
+  padding: 20px 20px;
+}
+
+#data {
+  margin: 0 auto;
+  width: 400px;
+  text-align: left;
+}
+
+
+#graph-container {
+  margin: 20px; auto;
+}
+
+#graph-container td{
+  height: 20px;
+  width: 20px;
+}
+.running{ background-color: #f20;}
+.waiting { background-color: #1f1;}
+.doesnt-exist  { background-color: transparent;}
+
+#table-container{
+  width: 900px;
+  margin: 40px; 10px;
+  height: 300px;
+}
+
+#table-container table{
+  width: 600px;
+  height: 300px;  
+  margin: 0 auto;
+}
+
+#table-container th{
+  width: 70px;
+  height: 30px;  
+  border: 1px #fff solid;
+  text-align: center;
+}
+
+#table-container td{
+  width: 70px;
+  height: 30px;  
+  border: 1px #fff solid;
+  text-align: center;
+}
+
+#footer {
+  position: absolute;
+  height: 60px;
+  width: 100%;
+  background: #111;
+  padding-top: 20px;
+}
+
+#footer p{
+  color: #fff;
+}
