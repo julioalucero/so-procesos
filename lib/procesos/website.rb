@@ -6,11 +6,8 @@ module Procesos
     set :root, File.expand_path("../../../", __FILE__)
 
     get '/' do
-      redirect :index
+      redirect 'index.html'
     end
 
-    get '/hola' do
-      'hola mundo cruel'
-    end
   end
 end
