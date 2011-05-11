@@ -3,9 +3,19 @@ html {
   text-align: center;
 }
 
+table {   width: 100%; }
+
+input { margin: 5px 5px;}
+
 a{text-decoration: none;}
 a:link,  a:visited { color: #fff;}
 a:hover, a:active  { color: #ddd;}
+
+h2 { 
+  font-size: 16px;
+  text-align: center;
+  font-weight: bold;
+}
 
 #wrapper {
   background: #2a6ebb url(../images/degradado.jpg) repeat-x;
@@ -31,11 +41,18 @@ a:hover, a:active  { color: #ddd;}
 #content {
   width: auto;
   height: 600px;
-  padding: 50px 20px;
+  padding: 20px 20px;
 }
 
-table {
-  width: 100%;
+#data {
+  margin: 0 auto;
+  width: 400px;
+  text-align: left;
+}
+
+
+#graph-container {
+  margin: 20px; auto;
 }
 
 .running{ background-color: #f20;}
