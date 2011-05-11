@@ -15,10 +15,8 @@ h2 {
   font-size: 16px;
   text-align: center;
   font-weight: bold;
+  margin: 10px 10px;
 }
-
-select { float: left; }
-input  { float: right; }
 
 #wrapper {
   background: #3575bf url(../images/degradado.jpg) repeat-x;
@@ -49,10 +47,25 @@ input  { float: right; }
 
 #data {
   margin: 0 auto;
-  width: 400px;
+  width: 560px;
+  height: 350px;
   text-align: left;
+  float: none;
 }
 
+#data-table {
+  float:left;
+}
+
+  #data-table td{
+    width: 120px;
+  }
+
+#buttons {
+  float: right;
+  width: 80px;
+  margin-top: 20px;
+}
 
 #graph-container {
   margin: 20px; auto;

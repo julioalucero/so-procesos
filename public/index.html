@@ -19,94 +19,91 @@
     <div id="content">
 
       <div id="data">
+
         <form>
           <h2>Complete los datos y elija su estrategia</h2>
-          <select>
-            <option>FCFS</option>
-            <option>SJN</option>
-            <option>RR</option>
-          </select>
-          <input name="Planificador" type="button" value="Planificar" />
-          <input name="Randon" type="button" value="Rellenar con Aleatorio" />
+
+          <div id="data-table">
+            <table>
+              <tr>
+                <th><b>N° de Proceso</b></th>
+                <th><b>Instante de llegada</b></th>
+                <th><b>Rafagas</b></th>
+                <th><b>prioridad</b></th>
+              </tr>
+              <tr>
+                <td><p>1 </p></td>
+                <td><input name="llegada-01"   maxlength="10" size="2" type="numeric" /></td>
+                <td><input name="rafagas-01"   maxlength="10" size="2" type="integer" /></td>
+                <td><input name="prioridad-01" maxlength="10" size="2" type="integer" /></td>
+              </tr>
+              <tr>
+                <td><p>2 </p></td>
+                <td><input name="llegada-02"  maxlength="10" size="2" type="integer" /></td>
+                <td><input name="rafagas-02"  maxlength="10" size="2" type="integer" /></td>
+                <td><input name="prioridad-02"maxlength="10" size="2" type="integer" /></td>
+              </tr>
+              <tr>
+                <td><p>3 </p></td>
+                <td><input name="llegada-03"  maxlength="10" size="2" type="integer" /></td>
+                <td><input name="rafagas-03"  maxlength="10" size="2" type="integer" /></td>
+                <td><input name="prioridad-03"maxlength="10" size="2" type="integer" /></td>
+              </tr>
+              <tr>
+                <td><p>4 </p></td>
+                <td><input name="llegada-04"  maxlength="10" size="2" type="integer" /></td>
+                <td><input name="rafagas-04"  maxlength="10" size="2" type="integer" /></td>
+                <td><input name="prioridad-04"maxlength="10" size="2" type="integer" /></td>
+              </tr>
+              <tr>
+                <td><p>5 </p></td>
+                <td><input name="llegada-05"  maxlength="10" size="2" type="integer" /></td>
+                <td><input name="rafagas-05"  maxlength="10" size="2" type="integer" /></td>
+                <td><input name="prioridad-05"maxlength="10" size="2" type="integer" /></td>
+              </tr>
+              <tr>
+                <td><p>6 </p></td>
+                <td><input name="llegada-06"  maxlength="10" size="2" type="integer" /></td>
+                <td><input name="rafagas-06"  maxlength="10" size="2" type="numeric" /></td>
+                <td><input name="prioridad-06"maxlength="10" size="2" type="integer" /></td>
+              </tr>
+              <tr>
+                <td><p>7 </p></td>
+                <td><input name="llegada-07"  maxlength="10" size="2" type="integer" /></td>
+                <td><input name="rafagas-07"  maxlength="10" size="2" type="integer" /></td>
+                <td><input name="prioridad-07"maxlength="10" size="2" type="integer" /></td>
+              </tr>
+              <tr>
+                <td><p>8 </p></td>
+                <td><input name="llegada-08"  maxlength="10" size="2" type="integer" /></td>
+                <td><input name="rafagas-08"  maxlength="10" size="2" type="integer" /></td>
+                <td><input name="prioridad-08"maxlength="10" size="2" type="integer" /></td>
+              </tr>
+              <tr>
+                <td><p>9 </p></td>
+                <td><input name="llegada-09"  maxlength="10" size="2" type="integer" /></td>
+                <td><input name="rafagas-09"  maxlength="10" size="2" type="integer" /></td>
+                <td><input name="prioridad-09"maxlength="10" size="2" type="integer" /></td>
+              </tr>
+              <tr>
+                <td><p>10</p></td>
+                <td><input name="llegada-10"  maxlength="10" size="2" type="integer" /></td>
+                <td><input name="rafagas-10"  maxlength="10" size="2" type="integer" /></td>
+                <td><input name="prioridad-10"maxlength="10" size="2" type="integer" /></td>
+              </tr>
+            </table>
+          </div>
+
+          <div id="buttons">
+            <input type="submit" name="submit_button" value="FCFS"        size=4  />
+            <input type="submit" name="submit_button" value="SJN"         size=14 />
+            <input type="submit" name="submit_button" value="Round Robin" size=14 />
+            <input type="submit" name="submit_button" value="Prioridad"   size=14 />
+          </div>
         </form>
-        <table>
-          <tr>
-            <th><b>N° de Proceso</b></th>
-            <th><b>Instante de llegada</b></th>
-            <th><b>Rafagas</b></th>
-            <th><b>prioridad</b></th>
-          </tr>
-          <tr>
-            <td><p>1 </p></td>
-            <td><input name="llegada-01"   maxlength="10" size="2" type="numeric" /></td>
-            <td><input name="rafagas-01"   maxlength="10" size="2" type="integer" /></td>
-            <td><input name="prioridad-01" maxlength="10" size="2" type="integer" /></td>
-          </tr>
-          <tr>
-            <td><p>2 </p></td>
-            <td><input name="llegada-02"  maxlength="10" size="2" type="integer" /></td>
-            <td><input name="rafagas-02"  maxlength="10" size="2" type="integer" /></td>
-            <td><input name="prioridad-02"maxlength="10" size="2" type="integer" /></td>
-          </tr>
-          <tr>
-            <td><p>3 </p></td>
-            <td><input name="llegada-03"  maxlength="10" size="2" type="integer" /></td>
-            <td><input name="rafagas-03"  maxlength="10" size="2" type="integer" /></td>
-            <td><input name="prioridad-03"maxlength="10" size="2" type="integer" /></td>
-          </tr>
-          <tr>
-            <td><p>4 </p></td>
-            <td><input name="llegada-04"  maxlength="10" size="2" type="integer" /></td>
-            <td><input name="rafagas-04"  maxlength="10" size="2" type="integer" /></td>
-            <td><input name="prioridad-04"maxlength="10" size="2" type="integer" /></td>
-          </tr>
-          <tr>
-            <td><p>5 </p></td>
-            <td><input name="llegada-05"  maxlength="10" size="2" type="integer" /></td>
-            <td><input name="rafagas-05"  maxlength="10" size="2" type="integer" /></td>
-            <td><input name="prioridad-05"maxlength="10" size="2" type="integer" /></td>
-          </tr>
-          <tr>
-            <td><p>6 </p></td>
-            <td><input name="llegada-06"  maxlength="10" size="2" type="integer" /></td>
-            <td><input name="rafagas-06"  maxlength="10" size="2" type="numeric" /></td>
-            <td><input name="prioridad-06"maxlength="10" size="2" type="integer" /></td>
-          </tr>
-          <tr>
-            <td><p>7 </p></td>
-            <td><input name="llegada-07"  maxlength="10" size="2" type="integer" /></td>
-            <td><input name="rafagas-07"  maxlength="10" size="2" type="integer" /></td>
-            <td><input name="prioridad-07"maxlength="10" size="2" type="integer" /></td>
-          </tr>
-          <tr>
-            <td><p>8 </p></td>
-            <td><input name="llegada-08"  maxlength="10" size="2" type="integer" /></td>
-            <td><input name="rafagas-08"  maxlength="10" size="2" type="integer" /></td>
-            <td><input name="prioridad-08"maxlength="10" size="2" type="integer" /></td>
-          </tr>
-          <tr>
-            <td><p>9 </p></td>
-            <td><input name="llegada-09"  maxlength="10" size="2" type="integer" /></td>
-            <td><input name="rafagas-09"  maxlength="10" size="2" type="integer" /></td>
-            <td><input name="prioridad-09"maxlength="10" size="2" type="integer" /></td>
-          </tr>
-          <tr>
-            <td><p>10</p></td>
-            <td><input name="llegada-10"  maxlength="10" size="2" type="integer" /></td>
-            <td><input name="rafagas-10"  maxlength="10" size="2" type="integer" /></td>
-            <td><input name="prioridad-10"maxlength="10" size="2" type="integer" /></td>
-          </tr>
-        </table>
       </div>
 
-     <input type="submit" 
-           name="submit_button" 
-           value="Round Robin" 
-           size=14 
-           onClick="return valida(this)" 
-      />
-
-
+     
       <div id="graph-container">
       </div>
 
