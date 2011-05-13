@@ -223,8 +223,44 @@ function drawTable(graphData) {
   console.log(graphData)
 }
 
+function aleatorio(){
+  document.getElementById('llegada-01').value =Math.floor(Math.random()*10);
+  document.getElementById('llegada-02').value =Math.floor(Math.random()*10);
+  document.getElementById('llegada-03').value =Math.floor(Math.random()*10);
+  document.getElementById('llegada-04').value =Math.floor(Math.random()*10);
+  document.getElementById('llegada-05').value =Math.floor(Math.random()*10);
+  document.getElementById('llegada-06').value =Math.floor(Math.random()*10);
+  document.getElementById('llegada-07').value =Math.floor(Math.random()*10);
+  document.getElementById('llegada-08').value =Math.floor(Math.random()*10);
+  document.getElementById('llegada-09').value =Math.floor(Math.random()*10);
+  document.getElementById('llegada-10').value =Math.floor(Math.random()*10);
+
+  document.getElementById('rafagas-01').value =Math.floor(Math.random()*5 + 1);
+  document.getElementById('rafagas-02').value =Math.floor(Math.random()*5 + 1);
+  document.getElementById('rafagas-03').value =Math.floor(Math.random()*5 + 1);
+  document.getElementById('rafagas-04').value =Math.floor(Math.random()*5 + 1);
+  document.getElementById('rafagas-05').value =Math.floor(Math.random()*5 + 1);
+  document.getElementById('rafagas-06').value =Math.floor(Math.random()*5 + 1);
+  document.getElementById('rafagas-07').value =Math.floor(Math.random()*5 + 1);
+  document.getElementById('rafagas-08').value =Math.floor(Math.random()*5 + 1);
+  document.getElementById('rafagas-09').value =Math.floor(Math.random()*5 + 1);
+  document.getElementById('rafagas-10').value =Math.floor(Math.random()*5 + 1);
+
+  document.getElementById('prioridad-01').value= Math.floor(Math.random()*8);
+  document.getElementById('prioridad-02').value= Math.floor(Math.random()*8);
+  document.getElementById('prioridad-03').value= Math.floor(Math.random()*8);
+  document.getElementById('prioridad-04').value= Math.floor(Math.random()*8);
+  document.getElementById('prioridad-05').value= Math.floor(Math.random()*8);
+  document.getElementById('prioridad-06').value= Math.floor(Math.random()*8);
+  document.getElementById('prioridad-07').value= Math.floor(Math.random()*8);
+  document.getElementById('prioridad-08').value= Math.floor(Math.random()*8);
+  document.getElementById('prioridad-09').value= Math.floor(Math.random()*8);
+  document.getElementById('prioridad-10').value= Math.floor(Math.random()*8);
+}
+
 $(document).ready(function() {
   // TODO Esta info debería salir de un formulario, asegurate de respetar los index.
+/*
   var processes = [
     { index: 0, creationCicle: 1, cicles: 2 },
     { index: 1, creationCicle: 0, cicles: 2 },
@@ -242,4 +278,5 @@ $(document).ready(function() {
   drawGraph(new GraphData(fifo(processes)));
 
   drawTable(new GraphData(fifo(processes_table)));
+*/
 });
