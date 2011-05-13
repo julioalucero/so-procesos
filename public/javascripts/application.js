@@ -223,6 +223,8 @@ function drawTable(graphData) {
   console.log(graphData)
 }
 
+$("#random-button").live('click', function(e) { e.preventDefault(); aleatorio(); });
+
 function aleatorio(){
   document.getElementById('llegada-01').value =Math.floor(Math.random()*10);
   document.getElementById('llegada-02').value =Math.floor(Math.random()*10);
@@ -259,6 +261,7 @@ function aleatorio(){
 }
 
 $(document).ready(function() {
+  $
   // TODO Esta info debería salir de un formulario, asegurate de respetar los index.
 /*
   var processes = [
