@@ -260,6 +260,11 @@ function aleatorio(){
   document.getElementById('prioridad-10').value= Math.floor(Math.random()*8);
 }
 
+function acceptNum(event){
+  var key = window.Event ? event.which : event.keyCode
+  return ((key >= 48 && key <= 57) || ( key == 8)|| ( key == 75)  )
+}
+
 $(document).ready(function() {
   $
   // TODO Esta info debería salir de un formulario, asegurate de respetar los index.
