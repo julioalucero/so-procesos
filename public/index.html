@@ -98,10 +98,22 @@
 
           <div id="buttons">
             <input type="submit" name="submit_button" value="Relleno Aleatorio" size="14" id="random-button">
-            <input type="submit" name="submit_button" value="FCFS"        size=4  />
-            <input type="submit" name="submit_button" value="SJN"         size=14 />
-            <input type="submit" name="submit_button" value="Round Robin" size=14 />
-            <input type="submit" name="submit_button" value="Prioridad"   size=14 />
+            <input type="submit" name="submit_button" value="FCFS"        size=14  onClick="return valida('fifo')" />
+            <input type="submit" name="submit_button" value="SJN"         size=14 onClick="return valida('sjn')" />
+            <input type="submit" name="submit_button" value="Prioridad" size=14 onClick="return valida('prioridad')" />
+            <input type="submit" name="submit_button" value="Round-Robin"   size=14 onClick="return valida('RR', 2)" />
+            <select name="mydropdown" id=quantum>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
           </div>
         </form>
       </div>
