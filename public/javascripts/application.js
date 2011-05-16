@@ -286,8 +286,13 @@ function drawGraph(graphData) {
   var table = $('<table></table>').appendTo(container);
   for (var i=0; i < graphData.processesCount; i++) {
     var row = $('<tr></tr>').appendTo(table);
-    for (var j=0; j < graphData.ciclesCount; j++) {
-      $('<td></td>').appendTo(row);
+    for (var j=0; j+1 < graphData.ciclesCount; j++) {
+      if (j==0){
+        $('<td>' + (i+1) +'</td>').appendTo(row);
+      }
+      else{
+        $('<td></td>').appendTo(row);
+      }
     }
   }
   // Pintar nueva tabla
@@ -330,7 +335,7 @@ function drawTable(graphData) {
   var container = $('#table-container').empty();
   // Crear nueva tabla
   var table = $('<table></table>').appendTo(container);
-  for (var i=0; i < 4 + 1; i++) {
+  for (var i=0; i <= graphData.processesCount; i++) {
     var row = $('<tr></tr>').appendTo(table);
     for (var j=0; j < 7; j++) {
       if (i==0){
