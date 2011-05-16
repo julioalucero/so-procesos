@@ -108,6 +108,7 @@ h2 {
 
 #last-row{
   float: none;
+  text-align: center;
 }
 
   #last-row table{
@@ -118,7 +119,6 @@ h2 {
 
   #last-row tr{
     float: left;
-    width: 28px;
   }
 
   #last-row td{

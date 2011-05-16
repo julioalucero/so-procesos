@@ -291,17 +291,20 @@ function drawGraph(graphData) {
   }
 
   var table = $('<table></table>').appendTo(container);
-  for (var i=0; i < graphData.processesCount + 1; i++) {
+  for (var i=0; i < graphData.processesCount; i++) {
     var row = $('<tr></tr>').appendTo(table);
-    for (var j=0; j+1 < graphData.ciclesCount + 1; j++) {
-      if (i==graphData.processesCount){
-        $('<td>' + j + '</td>').appendTo(row);
-      }
-      else{
-        $('<td></td>').appendTo(row);
-      }
+    for (var j=0; j < graphData.ciclesCount; j++) {
+      $('<td></td>').appendTo(row);
     }
   }
+
+  var ancho = 920 / graphData.ciclesCount;
+  var lastRow = $('<div id="last-row"></div>').appendTo(container);
+  for (var j=0; j+1 <= graphData.ciclesCount; j++) {
+    var aux = $('<tr><td>'+ j +'</td></tr>').appendTo(lastRow);
+      $(aux).css('width', ancho);
+  }
+
   // Pintar nueva tabla
   table.find('tr').each(function(processNumber, tr) {
     $(tr).find('td').each(function(cicleNumber, td) {
