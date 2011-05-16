@@ -282,10 +282,11 @@ function haveBeenAllProcessesRan() {
 function drawGraph(graphData) {
   // Borrar tabla anterior
   var container = $('#graph-container').empty();
-  var contenedor = $('#first-column').empty();
+  var column = $('#first-column').empty();
+
   // Crear nueva tabla
 
-  var firstColumn = $('<div id="nombrar"></div>').appendTo(contenedor);
+  var firstColumn = $('<div id="nombrar"></div>').appendTo(column);
   var tabla = $('<table></table>').appendTo(firstColumn);
   for (var i=0; i < graphData.processesCount; i++) {
     var columna = $('<tr><td>' + (i+1) + '</td></tr>').appendTo(tabla);
