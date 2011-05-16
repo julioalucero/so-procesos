@@ -531,7 +531,6 @@ function valida(condicion) {
       break
 
     case 'RR':
-      alert(condicion);
       grafico = new GraphData(RoundRobin(processes,quantum));
       drawGraph(grafico);
       drawTable(grafico);
