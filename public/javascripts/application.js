@@ -286,8 +286,7 @@ function drawGraph(graphData) {
 
   // Crear nueva tabla
 
-  var firstColumn = $('<div id="nombrar"></div>').appendTo(column);
-  var tabla = $('<table></table>').appendTo(firstColumn);
+  var tabla = $('<table></table>').appendTo(column);
   for (var i=0; i < graphData.processesCount; i++) {
     var columna = $('<tr><td>' + (i+1) + '</td></tr>').appendTo(tabla);
   }

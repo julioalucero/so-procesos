@@ -82,16 +82,20 @@ h2 {
   margin: 20px; auto;
 }
 
-#nombrar table{
-  margin-top: 20px;
-  width: 10px;
+#first-column{
   float: left;
 }
 
-#nombrar td{
-  float: left;
-  height: 20px;
-}
+  #first-column table{
+    margin-top: 20px;
+    width: 10px;
+    float: left;
+  }
+
+  #first-column td{
+    float: left;
+    height: 20px;
+  }
 
   #graph-container td{
     height: 20px;
