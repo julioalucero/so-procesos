@@ -400,6 +400,11 @@ function drawTable(graphData) {
 
 $("#random-button").live('click', function(e) { e.preventDefault(); aleatorio(); });
 
+$("#fifo").live('click', function(e)        { e.preventDefault(); valida('fifo'); });
+$("#sjn").live('click', function(e)         { e.preventDefault(); valida('sjn'); });
+$("#prioridad").live('click', function(e)   { e.preventDefault(); valida('prioridad'); });
+$("#round-robin").live('click', function(e) { e.preventDefault(); valida('RR', 2); });
+
 function aleatorio(){
   document.getElementById('llegada-01').value =Math.floor(Math.random()*10);
   document.getElementById('llegada-02').value =Math.floor(Math.random()*10);
