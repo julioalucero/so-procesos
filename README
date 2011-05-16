@@ -4,7 +4,7 @@ Procesos Simulados:
 
 FCFS (First Come, First Served)
 SJN (Shortest Job Next)
-Round-Roubino
+Round - Robind
 Prioridad
 
 
@@ -13,3 +13,10 @@ Universidad: UNL  (Universidad Nacional del Litoral).
 Facultad:    Fich (Facultad De Ingeniría y Ciencias Hídricas).
 Curso:       Sistemas Operaticos.
 
+Autores:
+  Guido Ghisolfi
+  Julio Lucero
+
+Colaboración:
+  Jorge Ghisolfi
+  Gabriél Andretta ( @ohhgabriel )
