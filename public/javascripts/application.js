@@ -282,17 +282,20 @@ function haveBeenAllProcessesRan() {
 function drawGraph(graphData) {
   // Borrar tabla anterior
   var container = $('#graph-container').empty();
+  var contenedor = $('#first-column').empty();
   // Crear nueva tabla
+
+  var firstColumn = $('<div id="nombrar"></div>').appendTo(contenedor);
+  var tabla = $('<table></table>').appendTo(firstColumn);
+  for (var i=0; i < graphData.processesCount; i++) {
+    var columna = $('<tr><td>' + (i+1) + '</td></tr>').appendTo(tabla);
+  }
+
   var table = $('<table></table>').appendTo(container);
   for (var i=0; i < graphData.processesCount; i++) {
     var row = $('<tr></tr>').appendTo(table);
     for (var j=0; j+1 < graphData.ciclesCount; j++) {
-      if (j==0){
-        $('<td>' + (i+1) +'</td>').appendTo(row);
-      }
-      else{
-        $('<td></td>').appendTo(row);
-      }
+      $('<td></td>').appendTo(row);
     }
   }
   // Pintar nueva tabla
