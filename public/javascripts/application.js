@@ -283,19 +283,23 @@ function drawGraph(graphData) {
   // Borrar tabla anterior
   var container = $('#graph-container').empty();
   var column = $('#first-column').empty();
-
   // Crear nueva tabla
 
-  var tabla = $('<table></table>').appendTo(column);
+  var tableColumn = $('<table></table>').appendTo(column);
   for (var i=0; i < graphData.processesCount; i++) {
-    var columna = $('<tr><td>' + (i+1) + '</td></tr>').appendTo(tabla);
+    var columna = $('<tr><td>' + (i+1) + '</td></tr>').appendTo(tableColumn);
   }
 
   var table = $('<table></table>').appendTo(container);
-  for (var i=0; i < graphData.processesCount; i++) {
+  for (var i=0; i < graphData.processesCount + 1; i++) {
     var row = $('<tr></tr>').appendTo(table);
-    for (var j=0; j+1 < graphData.ciclesCount; j++) {
-      $('<td></td>').appendTo(row);
+    for (var j=0; j+1 < graphData.ciclesCount + 1; j++) {
+      if (i==graphData.processesCount){
+        $('<td>' + j + '</td>').appendTo(row);
+      }
+      else{
+        $('<td></td>').appendTo(row);
+      }
     }
   }
   // Pintar nueva tabla

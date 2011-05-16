@@ -106,6 +106,27 @@ h2 {
 .waiting { background-color: #66ff66;}
 .doesnt-exist  { background-color: transparent;}
 
+#last-row{
+  float: none;
+}
+
+  #last-row table{
+    margin-top: 20px;
+    width: 100%;
+    float: left;
+  }
+
+  #last-row tr{
+    float: left;
+    width: 28px;
+  }
+
+  #last-row td{
+    float: left;
+    height: 20px;
+    width: 100%;
+  }
+
 #table-container{
   width: 900px;
   margin: 40px; 10px;
