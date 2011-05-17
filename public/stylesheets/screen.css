@@ -1,4 +1,5 @@
 html {
+  background: #3575bf url(../images/degradado.jpg) repeat-x;
   font: 10px/20px Arial, sans-serif;
   text-align: center;
 }
@@ -19,7 +20,6 @@ h2 {
 }
 
 #wrapper {
-  background: #3575bf url(../images/degradado.jpg) repeat-x;
   margin: 0 auto;
   width: 1000px;
   height: 100%;
@@ -121,8 +121,8 @@ h2 {
 }
 
 .running{ background-color: #900;}
-.waiting { background-color: #66ff66;}
-.doesnt-exist  { background-color: transparent;}
+.waiting { background-color: #063;}
+.doesnt-exist  { background-color: #3575a0;}
 
 #last-row{
   float: none;
@@ -159,15 +159,15 @@ h2 {
 
 #table-container th{
   width: 70px;
-  height: 30px;  
-  border: 1px #fff solid;
+  height: 30px;
+  border: 1px #5797cf solid;
   text-align: center;
 }
 
 #table-container td{
   width: 70px;
-  height: 30px;  
-  border: 1px #fff solid;
+  height: 30px;
+  border: 1px #5797cf solid;
   text-align: center;
 }
 
