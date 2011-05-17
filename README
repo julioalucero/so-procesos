@@ -1,11 +1,13 @@
 Simulador de Planificador de Procesos.
 
+sitio web: http://so-procesos.heroku.com
+
 Procesos Simulados:
 
-FCFS (First Come, First Served)
-SJN (Shortest Job Next)
-Round - Robind
-Prioridad
+  FCFS (First Come, First Served)
+  SJN (Shortest Job Next)
+  Round - Robind
+  Prioridad
 
 
 
