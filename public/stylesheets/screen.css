@@ -66,11 +66,17 @@ h2 {
 
 #reset, #random {
   width: 80px;
+  left: 20px;
 }
 
 #data-table {
   float:left;
+  text-align: center;
 }
+
+  #data-table th{
+    text-align: center;
+  }
 
   #data-table td{
     width: 120px;
@@ -116,7 +122,7 @@ h2 {
 
 #quantum {
   width: 50px;
-  top: 28px;
+  top: 30px;
   position: relative;
 }
 
