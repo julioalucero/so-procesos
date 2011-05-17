@@ -58,10 +58,14 @@ h2 {
 
 #data {
   margin: 0 auto;
-  width: 560px;
+  width: 660px;
   height: 350px;
   text-align: left;
   float: none;
+}
+
+#reset, #random {
+  width: 80px;
 }
 
 #data-table {
@@ -74,8 +78,12 @@ h2 {
 
 #buttons {
   float: right;
-  width: 80px;
+  width: 150px;
   margin-top: 20px;
+}
+
+#buttons input{
+  width: 80px;
 }
 
 #graph-container {
@@ -101,6 +109,16 @@ h2 {
     height: 20px;
     width: 20px;
   }
+
+#round-robin {
+  float: left;
+}
+
+#quantum {
+  width: 50px;
+  top: 28px;
+  position: relative;
+}
 
 .running{ background-color: #900;}
 .waiting { background-color: #66ff66;}

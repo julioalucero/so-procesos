@@ -26,6 +26,9 @@
 
         <h2>Complete los datos y elija su estrategia</h2>
         <form>
+          <input type="submit" name="submit_button" value="Relleno Aleatorio" size="14" id="random-button">
+          <input type="button" value="Reset" id="reset" onClick="location.reload('index.html')">
+
           <div id="data-table">
             <table>
               <tr>
@@ -98,7 +101,6 @@
           </div>
 
           <div id="buttons">
-            <input type="submit" name="submit_button" value="Relleno Aleatorio" size="14" id="random-button">
             <input type="submit" name="submit_button" value="FCFS"        size=14 id="fifo" />
             <input type="submit" name="submit_button" value="SJN"         size=14 id="sjn" />
             <input type="submit" name="submit_button" value="Prioridad"   size=14 id="prioridad" />
@@ -115,7 +117,6 @@
               <option value="9">9</option>
               <option value="10">10</option>
             </select>
-            <input type="button"  value="Reset" onClick="location.reload('index.html')">
           </div>
         </form>
       </div>
