@@ -1,156 +1,117 @@
 function RoundRobin(processes,quantum) {
-  
   var graph = [];
   for (var i=0; i < processes.length; i++) {
     graph[i] = [];
-          }
+  }
   var cicle = 0;
   var queue = new Queue();
   var dif=0;
   var bandera =false;
 
-    while (cantidadEliminados(processes) != processes.length) {
-        queue = RRNextProcess(cicle, processes, queue,bandera);      
+  while (cantidadEliminados(processes) != processes.length) {
+    queue = RRNextProcess(cicle, processes, queue,bandera);
 
-
-         if (queue.isEmpty()==false) {
-        
-            var index= queue.peek(); //saca el indice del frente    
-            var dif= (processes[index].cicles - processes[index].countcicles);//aca hay un problema
-            
-            if( dif > quantum){    //si los ciclos q le faltan - los q hizo son mayores q el quantum
-            
-            var process=processes[index];
-            subtractRR(process, processes,quantum); // elimino los ciclos    
-            
-            for(var i=cicle ;i< (cicle + quantum);i++){
-            graph[index][i] = 'r';    }
-            
-            for (var j=process.creationCicle; j<cicle;j++){
-            if(graph[process.index][j] != 'r')
-            graph[process.index][j]='w';
-            }
-
-            cicle+=quantum;
-            bandera=true;
-                        
-
-                        }//end if
-                
-        else
-            {
-        
+    if (queue.isEmpty()==false) {
+      var index= queue.peek(); //saca el indice del frente
+      var dif= (processes[index].cicles - processes[index].countcicles);//aca hay un problema
+      if( dif > quantum){    //si los ciclos q le faltan - los q hizo son mayores q el quantum
         var process=processes[index];
-        processes[index].countcicles = processes[index].cicles;
-        queue.erase(index);
-        for(var i=cicle ;i< (cicle + dif);i++){
-        graph[index][i] = 'r';} 
-            for (var j=process.creationCicle; j<cicle;j++){
-            if(graph[process.index][j] != 'r')
+        subtractRR(process, processes,quantum); // elimino los ciclos
+        for(var i=cicle ;i< (cicle + quantum);i++){
+          graph[index][i] = 'r';
+        }
+        for (var j=process.creationCicle; j<cicle;j++){
+          if(graph[process.index][j] != 'r')
             graph[process.index][j]='w';
-            }
-        cicle+=dif;    
-        bandera=false;        
-     }
-
+        }
+        cicle+=quantum;
+        bandera=true;
     }//end if
-    
-else{
-cicle++;
-
+    else{
+      var process=processes[index];
+      processes[index].countcicles = processes[index].cicles;
+      queue.erase(index);
+      for(var i=cicle ;i< (cicle + dif);i++){
+      graph[index][i] = 'r';} 
+          for (var j=process.creationCicle; j<cicle;j++){
+          if(graph[process.index][j] != 'r')
+          graph[process.index][j]='w';
+          }
+      cicle+=dif;
+      bandera=false;
+     }
+    }//end if
+    else{
+      cicle++;
+    }
+  }//end while
+  return graph;
 }
-
-      }//end while
-
-
-return graph;
-}
-
-//-----------------------------
 
 function RRNextProcess(cicle, processes, queue,bandera) {
-    
-    aux = new Queue();
-    
-    for (var i=0; i < processes.length; i++) {
-        if ((cicle >= processes[i].creationCicle) && (processes[i].cicles != processes[i].countcicles)) {
-    
+  aux = new Queue();
+  for (var i=0; i < processes.length; i++) {
+    if ((cicle >= processes[i].creationCicle) && (processes[i].cicles != processes[i].countcicles)) {
       if (queue.pertenece(processes[i].index)==false) {
          aux.enqueue(processes[i].index);
-
-        
-        
-                                  }
-                            }
-                     }
+      }
+    }
+  }
 
 //SI se agrega uno solo no comparo
 
-if(aux.tamanio() == 1){
-    queue.enqueue(aux.peek());
-}
-else // si hay mas de uno reacomodo los que se encolaron
+  if(aux.tamanio() == 1){
+      queue.enqueue(aux.peek());
+  }
+  else // si hay mas de uno reacomodo los que se encolaron
+  {
+    while(! aux.isEmpty()){
+    var ind = buscaMenor(processes,aux);
+    queue.enqueue(ind);
+    aux.erase(ind);
+    }
+  }
+  //cambio pos del primero
 
-{
-
-while(! aux.isEmpty()){
-var ind = buscaMenor(processes,aux);
-queue.enqueue(ind);
-aux.erase(ind);
-}
-
-}
-//cambio pos del primero
-
-if((bandera == true) && (queue.tamanio()>1)){
+  if((bandera == true) && (queue.tamanio()>1)){
     var ind=queue.peek();
     queue.erase(ind);
-      queue.enqueue(ind);
-    
-    
-}
- 
+    queue.enqueue(ind);
+  }
   return queue;
 }
 
-//-------------------------
-
 function buscaMenor(processes,aux){
-    var menor=processes[aux.mostrarpos(0)].creationCicle;
-    var indice = processes[aux.mostrarpos(0)].index;
-    var tam= aux.tamanio();
-    for( var k=1; k<tam;k++){
+  var menor=processes[aux.mostrarpos(0)].creationCicle;
+  var indice = processes[aux.mostrarpos(0)].index;
+  var tam= aux.tamanio();
+  for( var k=1; k<tam;k++){
     if(processes[k].creationCicle < menor){
-        menor=processes[aux.mostrarpos(k)].creationCicle;
-        indice = processes[aux.mostrarpos(k)].index;
-}}
+      menor=processes[aux.mostrarpos(k)].creationCicle;
+      indice = processes[aux.mostrarpos(k)].index;
+  }
+}
 
 return indice;
 }
 
-
-//-------------------
-
 function subtractRR(process, processes,cant) {
-
   for (var i=0; i < processes.length; i++) {
     if (processes[i] == process) {
-    
-    processes[i].countcicles+=cant;
+     processes[i].countcicles+=cant;
 }}}
 
 //--------------------
 
 function cantidadEliminados(processes){
-        
-    var cantidad = 0;
-    for(var k=0 ;k < processes.length; k++){
-        
-    if(processes[k].cicles == processes[k].countcicles)
-        cantidad++;
-        }
-return cantidad;
+  var cantidad = 0;
+  for(var k=0 ;k < processes.length; k++){
+   if(processes[k].cicles == processes[k].countcicles)
+     cantidad++;
+  }
+  return cantidad;
 }
+
 //-------------------------Funcion Prioridad
 
 function prioridad(processes) {
