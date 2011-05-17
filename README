@@ -1,6 +1,9 @@
 Simulador de Planificador de Procesos.
 
-sitio web: http://so-procesos.heroku.com
+Para Ejecutar:
+  - http://so-procesos.heroku.com; o
+  - Abrir public/index.html.
+
 
 Procesos Simulados:
 
